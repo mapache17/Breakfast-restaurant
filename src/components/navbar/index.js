@@ -10,6 +10,7 @@ const Navbar = ({ children }) => {
   const handleClick = () => {
     navigate(`/`);
   };
+
 	return (
 		<div className='navbar-container' onClick={handleClick}>
 			<HomeIcon />

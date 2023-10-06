@@ -1,14 +1,19 @@
 import React from 'react';
-
+import { useNavigate } from 'react-router-dom';
 import './index.css';
 
 const MealPreviw = ({ meal }) => {
+  const navigate = useNavigate();
 
-	return (
-		<div className='meal-previw'>
-		<img src={meal.strMealThumb} alt={meal.strMeal} />
-		</div>
-	);
+  const handleClick = () => {
+    navigate(`/recipe/${meal.idMeal}`);
+  };
+
+  return (
+    <div className='meal-previw' onClick={handleClick}>
+      <img src={meal.strMealThumb} alt={meal.strMeal} />
+    </div>
+  );
 };
 
 export default MealPreviw;
